@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/platform-server": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "@ngrx/store": "^13.2.0",
     "@nguniversal/express-engine": "^13.1.1",
     "express": "^4.15.2",
     "rxjs": "~7.5.0",
@@ -44,5 +45,12 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.6.2"
+  },
+  "overrides": {
+    "@nguniversal/builders": {
+      "browser-sync": {
+        "portscanner": "2.2.0"
+      }
+    }
   }
 }
