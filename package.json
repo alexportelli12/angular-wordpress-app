@@ -10,7 +10,10 @@
     "dev:ssr": "ng run angular-wordpress-app:serve-ssr",
     "serve:ssr": "node dist/angular-wordpress-app/server/main.js",
     "build:ssr": "ng build && ng run angular-wordpress-app:server",
-    "prerender": "ng run angular-wordpress-app:prerender"
+    "prerender": "ng run angular-wordpress-app:prerender",
+    "rename-index": "cd functions && ren lib\\browser\\index.html index.original.html",
+    "deploy": "firebase deploy --only hosting,functions",
+    "app:deploy": "npm run build:ssr && npm run rename-index && npm run deploy"
   },
   "private": true,
   "dependencies": {
